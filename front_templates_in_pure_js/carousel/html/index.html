@@ -10,11 +10,20 @@
 </head>
 <body>
 <div id="container">
+    <p id="number"></p>
+    <span id="previousButton" onclick="previous()">&#10094</span>
+    <span id="nextButton" onclick="next()">&#10095</span>
+    <div id="spring" class="imageContainer"></div>
+    <div id="summer" class="imageContainer"></div>
+    <div id="autumn" class="imageContainer"></div>
+    <div id="winter" class="imageContainer"></div>
     <div id="dotContainer">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        <span id="first" class="dot" onclick="currentSlide(1, this)"></span>
+        <span id="second" class="dot" onclick="currentSlide(2, this)"></span>
+        <span id="third" class="dot" onclick="currentSlide(3, this)"></span>
+        <span id="fourth" class="dot" onclick="currentSlide(4, this)"></span>
     </div>
+    <p id="playButton" onclick="play()">play</p>
 </div>
 <script src="../js/index.js"></script>
 </body>

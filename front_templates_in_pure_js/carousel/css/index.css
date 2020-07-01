@@ -7,10 +7,35 @@
 }
 
 #container{
-    width: 100vw;
+    width: 98.875vw;
     height: 100vh;
-    background: royalblue;
-    /*position: relative;*/
+    transition: 0.5s ease;
+}
+
+#number{
+    position: fixed;
+    margin: 2%;
+}
+
+#nextButton, #previousButton {
+    margin: 3%;
+    position: fixed;
+    font-size: 50px;
+    top: 40vh;
+    opacity: 0.3;
+}
+
+#nextButton:hover, #previousButton:hover {
+   opacity: 1;
+    cursor: pointer;
+}
+
+#previousButton{
+    left: 0;
+}
+
+#nextButton{
+    right: 0;
 }
 
 #dotContainer{
@@ -19,11 +44,64 @@
     bottom: 0;
     left: 45vw;
 }
+
+.imageContainer{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+#spring{
+    background-image: url("../pics/spring");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#summer{
+    background-image: url("../pics/summer");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#autumn{
+    background-image: url("../pics/autumn");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#winter{
+    background-image: url("../pics/winter");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
 .dot{
     display: inline-block;
     border-radius: 50%;
-    background: #bbb;
+    background: #ddd;
     width: 15px;
     height: 15px;
     cursor: pointer;
+}
+
+span.dot:hover{
+    background: grey;
+}
+
+.active{
+    background: grey;
+}
+
+#playButton{
+    font-size: 25px;
+   opacity: 0.3;
+    cursor: pointer;
+    position: fixed;
+    left: 5vw;
+    bottom: 2vh;
+}
+
+#playButton:hover{
+    opacity: 1;
 }
