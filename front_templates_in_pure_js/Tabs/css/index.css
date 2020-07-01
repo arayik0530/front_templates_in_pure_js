@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+}
+
+.tabs{
+    width: 100%;
+    display: inline-block;
+    background: #f1f1f1;
+}
+
+#container{
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    height: 300px;
+    background: #ffffff;
+}
+
+.tabLinks{
+    float: left;
+    text-align: center;
+    width: 15%;
+    height: 70px;
+}
+
+.active{
+    background: #ccc;
+}
+
+.tabs > .tabLinks:hover{
+    background: #ddd;
+    cursor: pointer;
+}
+
+.tabContent{
+    display: none;
+}

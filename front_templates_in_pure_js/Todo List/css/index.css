@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+}
+
+#container {
+    height: 100vh;
+    width: 100%;
+    background-color: powderblue;
+    padding-top: 3%;
+}
+
+#title{
+    text-align: center;
+}
+
+#todoApp{
+    margin-top: 5%;
+    margin-left: 30%;
+    width: 40%;
+    height: 70%;
+    background: royalblue;
+}
+
+#input{
+    margin-top: 1%;
+    height: 5%;
+    margin-left: 1%;
+    width: 85%;
+}
+
+#addButton{
+    display: inline-block;
+    background: gainsboro;
+    width: 7%;
+    margin-right: 1%;
+    height: 5%;
+}
+
+#addButton:hover{
+    cursor: pointer;
+}
+#todos{
+    margin: 1%;
+    width: 98%;
+    height: 92%;
+    background: azure;
+    overflow: auto;
+}
+
+#task{
+    width: 100%;
+    background: aqua;
+    border-top: 1px solid royalblue;
+
+    display: flex;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#taskElement{
+    padding: 1%;
+    word-wrap: break-word;
+    width: 95%;
+}
+
+.removeButton{
+    margin-right: 0;
+    cursor: pointer;
+}
