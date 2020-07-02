@@ -2,24 +2,22 @@ const SEASONCOUNT = 4;
 let slideIndex = 1;
 
 (function () {
-    currentSlide(slideIndex, document.getElementById("first"));
-    document.getElementById("number").innerText = `${slideIndex}/${SEASONCOUNT}`;
+    refresh();
 })();
 
-function next(){
+function next() {
     ++slideIndex;
     refresh();
 }
 
-function previous(){
+function previous() {
     --slideIndex;
     refresh();
 }
 
 function refresh() {
-    if(slideIndex < 1) slideIndex = 4;
-    if(slideIndex > 4) slideIndex = 1;
-    document.getElementById("number").innerText = `${slideIndex}/${SEASONCOUNT}`;
+    if (slideIndex < 1) slideIndex = 4;
+    if (slideIndex > 4) slideIndex = 1;
     let dotElement;
 
     switch (slideIndex) {
@@ -46,12 +44,12 @@ function refresh() {
     currentSlide(slideIndex, dotElement);
 }
 
-function currentSlide(index, dotElement){
+function currentSlide(index, dotElement) {
 
     dotElement.classList.add("active");
     let dots = document.getElementsByClassName("dot");
-    for(let dot of dots){
-        if(dot === dotElement)
+    for (let dot of dots) {
+        if (dot === dotElement)
             continue;
         dot.classList.remove("active");
     }
@@ -82,15 +80,16 @@ function currentSlide(index, dotElement){
         default:
     }
 
-    for(let pic of pics){
+    for (let pic of pics) {
         pic.style.display = 'none';
     }
 
     currentSeason.style.display = 'block';
 
+    document.getElementById("number").innerText = `${slideIndex}/${SEASONCOUNT}`;
 }
 
 function play() {
-   let timerId = setInterval(() => next(), 1000);
+    let timerId = setInterval(() => next(), 1000);
 }
 

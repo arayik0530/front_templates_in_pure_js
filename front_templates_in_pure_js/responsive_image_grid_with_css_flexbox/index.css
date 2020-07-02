@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    font-family: C059, serif;
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#flex-container > div {
+    flex: 25%;
+    max-width: 25%;
+}
+
+@media screen and (max-width: 700px){
+    #flex-container > div {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #flex-container > div {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
